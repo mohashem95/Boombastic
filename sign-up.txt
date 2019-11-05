@@ -1,0 +1,25 @@
+<form name="myForm" action="../Boombastic/index.html" onsubmit="return validateForm()" method="post">
+                
+                <pre>
+         
+                        First Name:         <input type="text" name="fname" placeholder="Enter your first name" pattern=".{2,}" required> <br>
+                        Last Name:          <input type="text" name="lname" placeholder="Enter your last name" pattern=".{2,}" required> <br>
+                        Date of birth:      <input type="date" placeholder="D/M/Y"  name="dob" required> <br>
+                        Phone number :      <input type="text" name="phone" placeholder="05xxxxxxxx "  pattern="[0-9]{10}" title="Enter your phone number" required> <br>
+                        City:               <select  name="city" required >
+                                <option   value="">--Select--</option>
+                                <option  value="Jeddah">Jeddah</option>
+                                <option value="Makkah">Makkah</option>
+                                <option value="Taif">Taif</option>
+                                <option value="Dammam">Dammam</option>
+                                <option value="Riyadh">Riyadh</option>
+                                <option value="Madina">Madina</option>                                                        
+                        </select>    <br>
+                        Email:              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email" required><br> 
+                        Password:           <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required> <br> 
+                        Confirm Password:   <input type="password" name="confirmPass" onkeyup="check();" required> <span id="message"></span> <br>
+                                              <input type="submit" value="Submit" id="submit" disabled  > <br>
+                                            
+        
+                </pre>
+        </form>
