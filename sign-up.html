@@ -1,12 +1,9 @@
 <!--Author: Abdullah-->
-<!DOCTYPE html>
-<html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Register</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AboutUs</title>
 
 <!--w3school-->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,17 +20,28 @@
 
 </head>
 
+<!--will be transfered to mystyle.css-->
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+body{
+       background-color: #ffffff
+       }
+</style>
+
 <body>
     <!--navbar-->  
   <nav class="navbar navbar-expand-lg navbar-Dark bg-Dark">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>    
+      </button>
+    
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="About.html">About Us <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">contact</a>
@@ -43,7 +51,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="login.html">Login</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sign-Up</a>
+              <a class="dropdown-item" href="sign-up.html">Sign-Up</a>
             </div>
           </li>
           <li class="nav-item">
@@ -54,10 +62,11 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-      </div> <!--where is the openning tag ?-->
+      </div>
     </nav>
      
-        <h1></p>QAYYEM <sup>SA</sup>  <h4><header align=right>  </header></h4> <nav aria-label="breadcrumb"> 
+  
+    <h1></p>QAYYEM <sup>SA</sup>  <h4><header align=right>  </header></h4> <nav aria-label="breadcrumb"> 
      
       
     
@@ -65,66 +74,61 @@
   
 
 
-<!-- Author: Mohammad Anas -->
- <script>
-                
-                 
-                  function check() {
-                          var p1 = document.forms["myForm"]["password"].value;
-                          var p2 = document.forms["myForm"]["confirmPass"].value;
+      <!-- Author: Mohammad Anas -->
+       <script>
+                      
+                       
+                        function check() {
+                                var p1 = document.forms["myForm"]["password"].value;
+                                var p2 = document.forms["myForm"]["confirmPass"].value;
+                               
+      
+                        if (p1 === p2) {
+                        document.getElementById("message").style.color = "green";
+                         document.getElementById("message").innerHTML = "matching";
+                         document.getElementById("submit").removeAttribute("disabled")
                          
-
-                  if (p1 === p2) {
-                  document.getElementById("message").style.color = "green";
-                   document.getElementById("message").innerHTML = "matching";
-                   document.getElementById("submit").removeAttribute("disabled")
-                   
-                 } else {
-                  document.getElementById("message").style.color = "red";
-                 document.getElementById("message").innerHTML = "not matching";
-                    } 
-                  }
-                
-                
-</script>
-                
-
-
-                <!-- Author: Abdullah Hassawi -- Edited by: Mohammad Anas -->
-                <form name="myForm" action="../Boombastic/index.html" onsubmit="return validateForm()" method="post">
-                
-                <pre>
-         
-                        First Name:         <input type="text" name="fname" placeholder="Enter your first name" pattern=".{2,}" required> <br>
-                        Last Name:          <input type="text" name="lname" placeholder="Enter your last name" pattern=".{2,}" required> <br>
-                        Date of birth:      <input type="date" placeholder="D/M/Y"  name="dob" required> <br>
-                        Phone number :      <input type="text" name="phone" placeholder="05xxxxxxxx "  pattern="[0-9]{10}" title="Enter your phone number" required> <br>
-                        City:               <select  name="city" required >
-                                <option   value="">--Select--</option>
-                                <option  value="Jeddah">Jeddah</option>
-                                <option value="Makkah">Makkah</option>
-                                <option value="Taif">Taif</option>
-                                <option value="Dammam">Dammam</option>
-                                <option value="Riyadh">Riyadh</option>
-                                <option value="Madina">Madina</option>                                                        
-                        </select>    <br>
-                        Email:              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email" required><br> 
-                        Password:           <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required> <br> 
-                        Confirm Password:   <input type="password" name="confirmPass" onkeyup="check();" required> <span id="message"></span> <br>
-                                              <input type="submit" value="Submit" id="submit" disabled  > <br>
-                                            
-        
-                </pre>
-        </form>
-                
-        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                        <i class="fa fa-instagram w3-hover-opacity"></i>
-                        <i class="fa fa-twitter w3-hover-opacity"></i>
-        </footer>
-
-</body>
-</html>
-
-
-        
+                       } else {
+                        document.getElementById("message").style.color = "red";
+                       document.getElementById("message").innerHTML = "not matching";
+                          } 
+                        }
+                      
+                      
+      </script>
+                      
+      
+      
+                      <!-- Author: Abdullah Hassawi -- Edited by: Mohammad Anas -->
+                      <form name="myForm" action="../Boombastic/index.html" onsubmit="return validateForm()" method="post">
+                      
+                      <pre>
+               
+                              First Name:         <input type="text" name="fname" placeholder="Enter your first name" pattern=".{2,}" required> <br>
+                              Last Name:          <input type="text" name="lname" placeholder="Enter your last name" pattern=".{2,}" required> <br>
+                              Date of birth:      <input type="date" placeholder="D/M/Y"  name="dob" required> <br>
+                              Phone number :      <input type="text" name="phone" placeholder="05xxxxxxxx "  pattern="[0-9]{10}" title="Enter your phone number" required> <br>
+                              City:               <select  name="city" required >
+                                      <option   value="">--Select--</option>
+                                      <option  value="Jeddah">Jeddah</option>
+                                      <option value="Makkah">Makkah</option>
+                                      <option value="Taif">Taif</option>
+                                      <option value="Dammam">Dammam</option>
+                                      <option value="Riyadh">Riyadh</option>
+                                      <option value="Madina">Madina</option>                                                        
+                              </select>    <br>
+                              Email:              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email" required><br> 
+                              Password:           <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required> <br> 
+                              Confirm Password:   <input type="password" name="confirmPass" onkeyup="check();" required> <span id="message"></span> <br>
+                                                    <input type="submit" value="Submit" id="submit" disabled  > <br>
+                                                  
+              
+                      </pre>
+              </form>
+    
+ <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+    </footer> 
+  </body> </html>
