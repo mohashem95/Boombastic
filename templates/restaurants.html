@@ -1,53 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
+
 <br>
 <br>
 <br>
+<div>
 <h3 style="margin-left: 50px"><a href="#" class="text-decoration-none">Restaurant list  <span class="badge badge-danger">New</span></a></h3>
 <br>
 <div class="card-deck" style="margin:50px">
+{% for i in rests %}
     <div class="card">
-      <img src="../static/images/mac.png" class="card-img-top" width="200" height="250" alt="...">
+      <a href="{{url_for('menu_list', menu = i['name'])}}"><img src="{{i['image']}}" class="card-img-top" width="200" height="250" alt="..."></a>
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{i['name']}}</h5>
+        <p class="card-text">{{i['description']}}</p>
+        <a href="{{url_for('menu_list', menu = i['name'])}}" class="btn btn-primary">see menu</a>
       </div>
     </div>
-    <div class="card">
-      <img src="../static/images/kudo.png" class="card-img-top" width="200" height="250" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../static/images/siction b.png" class="card-img-top" width="200" height="250" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card">
-        <img src="../static/images/Albaik.svg" class="card-img-top" width="200" height="250" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="../static/images/shrimp.png" class="card-img-top" width="200" height="250" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
+    
 
-  
+
+{% endfor %}
+</div>
      {% endblock %}

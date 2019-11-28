@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+
+{%block body%} 
+
+<div>
+
+<div>
+
+   {% for i in menu %}
+
+    <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{{url_for('meal', one_meal = i['name'])}}"><img src="{{i['image']}}" alt=""></a>
+                <h3>{{i['name']}}</h3>
+                <h5>{{i['description']}}</h5>
+            
+            
+            
+            </li>
+    </ul>
+
+    {% endfor %}
+
+</div>
+
+
+
+
+</div>
+
+
+{% endblock %}

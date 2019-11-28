@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1 ,
+        "name": "Mcdonalds" ,
+        "description": "Burgers, Fries & More. Quality Ingredients." ,
+        "image": "../static/images/mac.png"
+    },
+
+    {
+        "id": 2 ,
+        "name": "KUDO" ,
+        "description": "Burgers, Fries & More. Quality Ingredients." ,
+        "image": "../static/images/kudo.png"
+    },
+
+    {
+        "id": 3 ,
+        "name": "Siction B" ,
+        "description": "Burgers, Mini Burgers, Sides, Desserts" ,
+        "image": "../static/images/siction b.png"
+    },
+
+    {
+        "id": 4 ,
+        "name": "Albaik" ,
+        "description": "Chicken and seafood" ,
+        "image": "../static/images/Albaik.svg"
+    },
+
+    {
+        "id": 5 ,
+        "name": "Dominos pizza" ,
+        "description": "pizza, pasta, chicken & more" ,
+        "image": "../static/images/dominos.png"
+    }
+]

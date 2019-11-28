@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="card col-md-4" >
+
+
+{% for i in one_meal %}
+
+    <img src="{{i['image']}}" class="card-img-top" width="200" height="400" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{i['name']}}</h5>
+      <h6 class="card-text">{{i['restaurant']}}</h6>
+      <p class="card-text">{{i['description']}}</p>
+      <p class="card-text">{{i['rating']}}</p><i class="far fa-star"></i>
+      <p class="card-text">{{i['number of reviews']}}</p>
+      <a href="#" class="btn btn-dark">Add a review</a>
+    </div> 
+
+    {% endfor %}
+</div>
+{% endblock %}
