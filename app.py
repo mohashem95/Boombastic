@@ -68,17 +68,17 @@ def send_mail():
     user_mail = request.form["user_mail"]
     user_message = request.form["user_message"]
 
-    msg = Message('hello', sender= f'{user_mail}' , recipients= ['user_mail'])
+    msg = Message('hello', sender= 'noreply@demo.com' , recipients= [user_mail])
     msg.body = f'''{user_message}'''
     mail.send(msg)
     return home() 
 
 
-with open('data.json') as m:
+with open('../BOOMBASTIC/data.json') as m:
     meals = json.load(m)
 
 
-with open('restaurants.json') as r:
+with open('../BOOMBASTIC/restaurants.json') as r:
     rests = json.load(r)
 
 
