@@ -1,6 +1,5 @@
 from flask import Flask ,  render_template, json, url_for, request, session
 from flask_mail import Mail , Message
-import os
 
 app = Flask(__name__)
 
@@ -15,7 +14,7 @@ mail = Mail(app)
 
 @app.route('/home')
 @app.route('/')
-def index():
+def home():
     return render_template('index.html', title='home')
   
 
@@ -66,13 +65,13 @@ def menu_list(menu):
 
 @app.route('/', methods=['POST'])
 def send_mail():
-    user_mail = request.form['user_mail']
-    user_message = request.form['user_message']
+    user_mail = request.form["user_mail"]
+    user_message = request.form["user_message"]
 
-    msg = Message('hello', sender= f'{user_mail}' , recipients= ['yazeedth7@gmail.com'])
+    msg = Message('hello', sender= f'{user_mail}' , recipients= ['user_mail'])
     msg.body = f'''{user_message}'''
     mail.send(msg)
-    return index() 
+    return home() 
 
 
 with open('data.json') as m:
