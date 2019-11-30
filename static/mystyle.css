@@ -1,9 +1,8 @@
-body {font-family: "Lato", sans-serif}
+body {font-family: "Lato", sans-serif; 
+     background-color: #ffffff}
 
-body{
-       background-color: #ffffff
-       }
 img{margin: 15}
+
 p{font-family:'Segoe UI' ;font-size: xx-large}
 
 .rlist{margin-left: 50px}
