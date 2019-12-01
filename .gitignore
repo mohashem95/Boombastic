@@ -5,6 +5,8 @@ __pycache__/
 *$py.class
 .vscode 
 my-env
+.idea
+
 # C extensions
 *.so
 
