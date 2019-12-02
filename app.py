@@ -69,15 +69,12 @@ def menu_list(menu):
 
 
 
-
-
-
 @app.route('/', methods=['POST'])
 def send_mail():
-    user_mail = request.form["user_mail"]
+    usr_mail = request.form["user_mail"]
     user_message = request.form["user_message"]
 
-    msg = Message('hello', sender= 'noreply@demo.com' , recipients= [user_mail])
+    msg = Message('hello', sender= 'noreply@demo.com' , recipients= [usr_mail])
     msg.body = f'''{user_message}'''
     mail.send(msg)
     return home() 
