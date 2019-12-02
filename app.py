@@ -13,6 +13,9 @@ app.config['MAIL_PASSWORD'] = 'iadgzzumsxtqibev'
 
 mail = Mail(app)
 
+@app.route('/data')
+def data():
+    return render_template('fakedata.html', title='data')
 
 @app.route('/home')
 @app.route('/')
