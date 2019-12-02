@@ -83,11 +83,11 @@ def send_mail():
     return home() 
 
 
-with open('../BOOMBASTIC/data.json') as m:
+with open('./data.json') as m:
     meals = json.load(m)
 
 
-with open('../BOOMBASTIC/restaurants.json') as r:
+with open('./restaurants.json') as r:
     rests = json.load(r)
 
 
