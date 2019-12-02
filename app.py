@@ -87,7 +87,7 @@ with open('./data.json') as m:
     meals = json.load(m)
 
 
-with open('./6restaurants.json') as r:
+with open('./restaurants.json') as r:
     rests = json.load(r)
 
 
