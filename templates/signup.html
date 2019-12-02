@@ -33,31 +33,36 @@
 </script>
 <!--Author:Abdullah-->
 
-    <form  name="Sign-Up" action="../Boombastic/index.html"  method="post">
+    <form id="sign-up" name="Sign-Up" class="main-form needs-validation" novalidate>
 
         <div class="form-group col-md-4">
         <label for="name1">First name</label>
         <input type="text" class="form-control" id="name1" placeholder="Enter your first name" required>
+        <div class="invalid-feedback">Please enter your first name</div>
         </div>
        
         <div class="form-group col-md-4">
           <label for="name2">Last name</label>
           <input type="text" class="form-control" id="name2" placeholder="Enter your last name">
+          <div class="invalid-feedback">Please enter your last name</div>
         </div>
 
         <div class="form-group col-md-4">
                 <label for="phone">Phone number</label>
                 <input type="text" class="form-control" id="phone" placeholder="05xxxxxxxx "  pattern="[0-9]{10}" title="Enter your phone number" required>
+                <div class="invalid-feedback">Please enter your phone number</div>
         </div>
 
         <div class="form-group col-md-4">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email" required>
+                <div class="invalid-feedback">Please enter your email</div>
                 </div>
 
                 <div class="form-group col-md-4">
         <label for="dob">Date of birth</label>
         <input type="date" class="form-control" id="dob" placeholder="D/M/Y"  name="dob" required>
+        <div class="invalid-feedback"> please enter your date of birth</div>
         </div>
 
         <div class="form-group col-md-4">
@@ -71,27 +76,138 @@
                         <option value="Riyadh">Riyadh</option>
                         <option value="Madina">Madina</option>                                                        
                 </select> 
+                <div id="err-state" class="invalid-feedback">please choose a state</div>
                 </div>
 
                 <div class="form-group col-md-4">
                         <label for="password">Password</label>
                         <input type="password" name="password" class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required>
+                        <div class="invalid-feedback">please enter a password</div>
                         </div>
 
                         <div class="form-group col-md-4">
                                 <label for="password2">Confirm password</label>
-                                <input type="password" name="confirmPass" class="form-control" id="password2"  onkeyup="check();" required> </div> <span class="form-text" id="message"></span> <br>
+                                <input type="password" name="confirmPass" class="form-control" id="password2"  onkeyup="check();" required> </div> <span class="form-text" id="message"></span>
+                                <div id="err-confirm" class="invalid-feedback">please type your password again</div> <br>
 
 
 
 
         <div class="col-auto">
-                <button type="submit" class="btn btn-dark" id="submit" disabled >Submit</button>
+                <button type="submit" class="btn btn-dark" id="submit">Submit</button>
               </div>
     </form>
        
     
+<script>
 
+function checkText(id)
+{
+        var div = $("#"+id).closest("input");
+        if($("#"+id).val() == null || $("#"+id).val() == "")
+        {
+                div.addClass(" is-invalid");
+                return false;
+        }
+        else
+        {
+                div.removeClass(" is-invalid");
+                div.addClass(" is-valid");
+                return true;
+        }
+}
+
+function confirmPass()
+{
+        if($("password2").val() != $("password").val())
+        {
+                $("#password2").addClass(" is-invalid");
+                $("err-confirm").html("does not match password");
+                return false;
+        }
+        else
+        {
+                $("#password2").removeClass(" is-invalid");
+                $("#password2").addClass(" is-valid");
+                return true;
+        }
+}
+
+$(document).ready(
+function()
+{
+        $("#sign-up").submit(
+
+        function()
+        {
+                if(!checkText("name1"))
+                {
+                        return false;
+                }
+                if(!checkText("name2"))
+                {
+                        return false;
+                }
+                if(!checkText("phone"))
+                {
+                        return false;
+                }
+                if(!checkText("email"))
+                {
+                        return false;
+                }
+                if(!checkText("dob"))
+                {
+                        return false;
+                }
+                if($("inputState").val() === "")
+                {
+                        $("#inputState").addClass(" is-invalid")
+                        $("#err-state").html("please choose a state")
+                        return false;
+                }
+                else
+                {
+                        $("#inputState").removeClass(" is-invalid")
+                        $("#inputState").addClass(" is-valid")
+                }
+                if(!checkText("password"))
+                {
+                        return false;
+                }
+                if(!checkText("password2"))
+                {
+                        return false;
+                }
+                if(!confirmPass())
+                {
+                        return false;
+                }
+        }
+        )
+}
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
        
         
       
