@@ -1,7 +1,7 @@
 from flask import Flask ,  render_template, json, url_for, request, session
 from flask_mail import Mail , Message
-#from waitress import serve
-#heroku import os
+from waitress import serve
+import os
 
 app = Flask(__name__)
 
@@ -159,13 +159,13 @@ def meal_name(meals, m_name):
             yield meals[i]
             json.dumps(meals[i])
 
-print("-- DEBUG MODE ----")
-app.run(debug=True, port='5555')
+#print("-- DEBUG MODE ----")
+#app.run(debug=True, port='5555')
             
-#if __name__ == '__main__':
-     #print("--PRODUCTION MODE ---")
-     #p = os.environ.get('PORT')
-     #serve(app, host='0.0.0.0', port=p)
+if __name__ == '__main__':
+     print("--PRODUCTION MODE ---")
+     p = os.environ.get('PORT')
+     serve(app, host='0.0.0.0', port=p)
 
 
 
