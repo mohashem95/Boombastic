@@ -6,7 +6,8 @@
         "image":"../static/images/angus.png",
         "rating":3.5,
         "description":"Juicy prime cuts of halal Angus beef topped with crispy chicken strips, fresh Boston lettuce, Melty Emmental cheese, and a smoky barbeque sauce, all nestled in a double split bun.",
-        "number of reviews": 132
+        "number of reviews": 132,
+        "progress": 50
     },
     
     {
@@ -16,7 +17,8 @@
         "image":"../static/images/macchicken.png",
         "rating":4.5,
         "description":"An unbelievable sandwich made with 2 breaded Halal chicken patties, cheese, lettuce, creamy mayo and a bun in the middle!",
-        "number of reviews": 76
+        "number of reviews": 76,
+        "progress": 75
     },
 
     {
@@ -26,7 +28,8 @@
         "image":"../static/images/mcroyal.png",
         "rating":2.0,
         "description":"The McRoyale has it all! A juicy Halal beef patty accompanied by cheese, crispy lettuce, fresh tomatoes, onions, zesty pickles, and spread with mayonnaise, ketchup and mustard.",
-        "number of reviews": 181
+        "number of reviews": 181,
+        "progress": 25
     },
 
     {
@@ -36,7 +39,8 @@
         "image":"../static/images/chickcombo.png",
         "rating":3.0,
         "description":"Hot and spicy chicken pieces paired with hot sauce, cheese and fresh veggies all stacked inside Kudu?s fresh bread, served with fries and soft drink",
-        "number of reviews": 28
+        "number of reviews": 28,
+        "progress": 50
     },
 
     {
@@ -46,7 +50,8 @@
         "image":"../static/images/beefcombo.png",
         "rating":3.5,
         "description":"Hot and spicy chicken pieces paired with hot sauce, cheese and fresh veggies all stacked inside Kudu?s fresh bread, served with fries and soft drink",
-        "number of reviews": 110
+        "number of reviews": 110,
+        "progress": 50
     },
 
     {
@@ -56,7 +61,8 @@
         "image":"../static/images/omeletcombo.png",
         "rating":1.5,
         "description":"Tasty omelet sandwich Combo paired with cheese, lettuce and fresh tomato. Wouldn't be complete without hash browns and refreshing juice",
-        "number of reviews": 86
+        "number of reviews": 86,
+        "progress": 25
     },
 
     {
@@ -66,7 +72,8 @@
         "image":"../static/images/b.png",
         "rating":3.5,
         "description":"Angus beef patty | cheddar cheese | iceberg lettuce | onion | tomato | pickles | with Section-B special sauce",
-        "number of reviews": 95
+        "number of reviews": 95,
+        "progress": 50
     },
 
     {
@@ -76,7 +83,8 @@
         "image":"../static/images/a.png",
         "rating":4.0,
         "description":"180g prime rib patty | mature cheddar cheese onion bacon marmalade | arugula.",
-        "number of reviews": 65
+        "number of reviews": 65,
+        "progress": 75
     },
 
     {
@@ -86,7 +94,8 @@
         "image":"../static/images/v.png",
         "rating":4.5,
         "description":"Lentil | quinoa | mushrooms and corn patty | american cheese and sb sauce",
-        "number of reviews": 147
+        "number of reviews": 147,
+        "progress": 75
     },
 
     {
@@ -96,7 +105,8 @@
         "image":"../static/images/fish.png",
         "rating":5.0,
         "description":"6 fish fillet pieces come with fries, a bun and your choice of 2 sauces (tartar/cocktail/nugget/garlic sauce)",
-        "number of reviews": 212
+        "number of reviews": 212,
+        "progress": 100
     },
 
     {
@@ -106,7 +116,8 @@
         "image":"../static/images/jshrimp.png",
         "rating":3.0,
         "description":"8 or 10 jumbo shrimp pieces come with fries, a bun and your choice of 2 sauces (cocktail/nugget/garlic sauce)",
-        "number of reviews": 77
+        "number of reviews": 77,
+        "progress": 50
     },
 
     {
@@ -116,7 +127,8 @@
         "image":"../static/images/chicken.png",
         "rating":3.0,
         "description":"4 pieces chicken meals come with fries, a bun and 2 garlic sauces",
-        "number of reviews": 109
+        "number of reviews": 109,
+        "progress": 50
     },
 
     {
@@ -126,7 +138,8 @@
         "image":"../static/images/philly.png",
         "rating":2.5,
         "description":"Slices of Beef Steak, Onions, Green Peppers, Mushrooms, Mozzarella, American Cheese & Dynamite Sauce",
-        "number of reviews": 83
+        "number of reviews": 83,
+        "progress": 25
     },
 
     {
@@ -136,7 +149,8 @@
         "image":"../static/images/meatzza.png",
         "rating":3.0,
         "description":"Beef Pepperoni, Italian Sausage, Mozzarella & Signature Tomato Sauce",
-        "number of reviews": 156
+        "number of reviews": 156,
+        "progress": 50
     },
 
     {
@@ -146,6 +160,7 @@
         "image":"../static/images/margherita.png",
         "rating":4.5,
         "description":"A Rich Layer of Real Mozzarella & Signature Tomato Sauce",
-        "number of reviews": 36
+        "number of reviews": 36,
+        "progress": 75
     }
 ]
