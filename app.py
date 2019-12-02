@@ -152,8 +152,8 @@ def meal_name(meals, m_name):
             yield meals[i]
             json.dumps(meals[i])
 
-        print("-- DEBUG MODE ----")
-        app.run(debug=True, port='5555')
+print("-- DEBUG MODE ----")
+app.run(debug=True, port='5555')
             
 #if __name__ == '__main__':
      #print("--PRODUCTION MODE ---")
