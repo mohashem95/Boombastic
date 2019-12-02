@@ -13,9 +13,13 @@ app.config['MAIL_PASSWORD'] = 'iadgzzumsxtqibev'
 
 mail = Mail(app)
 
+@app.errorhandler(404)
+def err_404(error):
+   return render_template( '404.html' ), 404
+
 @app.route('/data')
 def data():
-    return render_template('fakedata.html', title='data')
+    return render_template('fake_data.html', title='data')
 
 @app.route('/home')
 @app.route('/')
