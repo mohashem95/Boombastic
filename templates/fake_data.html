@@ -2,10 +2,15 @@
 
 
 {% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<button id="myButton">click</button>
+<button class="btn btn-dark" id="myButton">bring data</button>
 
-    <div id="feedBack">feedback</div>
+    <div id="feedBack"></div>
     
 
     <script>
@@ -26,20 +31,19 @@
                     for (i=0 ; i< resp.data.length; i++) 
                     {
                         myhtml += `
-                        <div class="card" style="margin: 15px">
-                            <h5 class="card-header">
-                                    <img src="${resp.data[i].avatar}" alt="" height="50" width="50">
-                                    ${resp.data[i].id}
-                            </h5>
-                            <div class="card-body">
-                                <p class="card-text">${resp.data[i].first_name} ${resp.data[i].last_name}</p> 
-                                <p class="card-text">${resp.data[i].email}</p> 
-                            </div>
-                        </div>`
+                    <div class="card-deck">
+                        <a href=""><img src="${resp.data[i].avatar}" class="card-img-top" width="200" height="250" alt="..."></a>
+                        <div class="card-body">
+                            <h5 class="card-title">${resp.data[i].first_name} ${resp.data[i].last_name}</h5>
+                            <p class="card-text">${resp.data[i].id}</p>
+                            <p class="card-text">${resp.data[i].email}</p>
+                        </div>
+                    </div>`    
                     }
                     console.log( resp )
                     $("#feedBack").html(myhtml) 
             });
         }
     </script>
+
 {% endblock %}
